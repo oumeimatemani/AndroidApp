@@ -19,7 +19,15 @@
             android:icon="@mipmap/usericon_foreground"
             android:title="Signup" />
 
+        <item
+            android:id="@+id/nav_planification"
+            android:icon="@drawable/trajet"
+            android:title="Planification" />
 
+        <item
+            android:id="@+id/nav_reservation"
+            android:icon="@drawable/calendrier"
+            android:title="Réservation" />
 
     </group>
 </menu>
