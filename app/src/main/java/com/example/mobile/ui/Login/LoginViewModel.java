@@ -24,9 +24,9 @@ public class LoginViewModel extends ViewModel {
         executor.execute(() -> {
             UserEntity user = userRepository.loginUser(email, password);
             if (user != null) {
-                userLiveData.postValue(user); // Successful login
+                userLiveData.postValue(user); // Connexion réussie
             } else {
-                errorLiveData.postValue("Invalid email or password"); // Failed login
+                errorLiveData.postValue("Invalid email or password"); // Échec de la connexion
             }
         });
     }

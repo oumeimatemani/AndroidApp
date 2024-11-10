@@ -11,6 +11,9 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.mobile.databinding.FragmentLoginBinding;
 import com.example.mobile.database.repositories.UserRepository;
+import android.content.Context;
+import android.content.SharedPreferences;
+
 
 public class LoginFragment extends Fragment {
 
@@ -44,7 +47,17 @@ public class LoginFragment extends Fragment {
         loginViewModel.getUserLiveData().observe(getViewLifecycleOwner(), user -> {
             if (user != null) {
                 Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+
+                // Save the username in SharedPreferences
+                SharedPreferences preferences = requireContext().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("username", user.getName());
+                editor.putString("email", user.getEmail());
+                editor.putString("phone", user.getPhoneNumber());
+                editor.apply(); // Apply changes to SharedPreferences
+
                 // Navigate to the next screen or update UI accordingly
+
             }
         });
 

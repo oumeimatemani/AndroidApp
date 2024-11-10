@@ -6,7 +6,18 @@
     android:padding="16dp"
     android:background="@color/background">
 
+    <!-- Username display -->
+
     <!-- Bannière d'introduction -->
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="oumeima"
+        android:textColor="@color/primary"
+        android:textSize="18sp" />
+
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
@@ -16,6 +27,8 @@
         android:text="Bienvenue  à "
         android:textColor="@color/primary"
         android:textSize="30sp" />
+
+
 
     <TextView
         android:id="@+id/appTitle"
