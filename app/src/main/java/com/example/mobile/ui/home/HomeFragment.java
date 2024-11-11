@@ -30,8 +30,8 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         // Underline the text in the tagline TextView using binding
-        TextView tagline = binding.tagline;
-        tagline.setPaintFlags(tagline.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+       // TextView tagline = binding.tagline;
+        //tagline.setPaintFlags(tagline.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         // Retrieve the username from SharedPreferences
         SharedPreferences preferences = requireContext().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);

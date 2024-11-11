@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/home"> <!-- Remplacez @color/background par @drawable/your_image_name -->
+    android:background="@drawable/acceuil"> <!-- Remplacez @color/background par @drawable/your_image_name -->
 
     <!-- Username display -->
 
@@ -15,40 +15,10 @@
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
         android:text="oumeima"
-        android:textColor="@color/primary"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="366dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:paddingBottom="8dp"
-        android:text="Bienvenue à "
-        android:textColor="@color/primary"
-        android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="359dp"
-        android:layout_height="65dp"
-        android:fontFamily="sans-serif-medium"
-        android:paddingBottom="8dp"
-        android:text="EasyRide"
-        android:textColor="@color/primary"
-        android:textSize="30sp"
-        android:gravity="center"/>
-
-    <TextView
-        android:id="@+id/tagline"
-        android:layout_width="389dp"
-        android:layout_height="97dp"
-        android:gravity="center"
-        android:paddingBottom="16dp"
-        android:text="Voyagez de manière écologique et économique"
-        android:textColor="@color/rouge"
-        android:textSize="16sp" />
 
 
 </LinearLayout>

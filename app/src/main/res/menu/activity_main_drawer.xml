@@ -33,12 +33,6 @@
 
     </group>
 
-    <!-- Group for items at the bottom (logout) -->
-    <group android:checkableBehavior="none">
-        <item
-            android:id="@+id/logoutButton"
-            android:icon="@drawable/logout"
-            android:title="LogOut" />
-    </group>
+
 
 </menu>
