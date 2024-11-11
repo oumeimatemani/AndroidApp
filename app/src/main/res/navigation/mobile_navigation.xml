@@ -15,22 +15,35 @@
             app:destination="@id/nav_profile" />
     </fragment>
 
+    <!-- SignInFragment -->
     <fragment
         android:id="@+id/nav_login"
         android:name="com.example.mobile.ui.Login.LoginFragment"
         android:label="SignIn"
         tools:layout="@layout/fragment_login" />
 
+    <!-- SignUpragment -->
     <fragment
         android:id="@+id/nav_signup"
         android:name="com.example.mobile.ui.signup.SignupFragment"
         android:label="SignUp"
         tools:layout="@layout/fragment_signup" />
 
-    <!-- Add ProfileFragment here -->
+
+
+    <!-- ProfileFragment -->
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.mobile.ui.Profil.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <!-- Action pour naviguer vers LoginFragment -->
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
+
+
 </navigation>

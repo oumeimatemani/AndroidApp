@@ -1,17 +1,20 @@
 package com.example.mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
-import com.example.mobile.DAO.PlanFoodDao;
 import com.example.mobile.database.DatabaseProvider;
 import com.example.mobile.database.EasyRideDatabase;
 import com.example.mobile.database.UserEntity;
+import com.example.mobile.ui.Login.LoginFragment;
+
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,33 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(u.getName());
             }
 
-
-            // exemple insert plan with food
-          //  FoodEntity food = new FoodEntity();
-          //  food.setNom("Pomme");
-           // food.setDescription("Une pomme fraîche");
-           // food.setImage("url_image_pomme");
-           // food.setType("Fruit");
-           // food.setCategorie("Fruits");
-           // food.setQuantite(1);
-           // food.setUnite("Pièce");
-
-           // long foodId = planFoodDao.insertFood(food);
-
-            // Création d'un objet PlanFood
-            //PlanFoodEntity plan = new PlanFoodEntity();
-           // plan.setJour("Lundi");
-           // plan.setType("Petit déjeuner");
-
-            //long planId = planFoodDao.insertPlan(plan);
-
-            // Création d'un objet PlanFoodCrossRef pour lier food et plan
-            //PlanFoodCrossRef crossRef = new PlanFoodCrossRef();
-            //crossRef.setFoodId(foodId);
-            //crossRef.setPlanId(planId);
-            //planFoodDao.insertPlanFoodCrossRef(crossRef);
-
-          //  Log.d("Insertion", "Insertion réussie avec FoodEntity ID: " + foodId + " et PlanFood ID: " + planId);
 
         }).start();
 
@@ -118,5 +95,23 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.logoutButton) {
+            logout();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        // Supprimez les informations de connexion (par exemple, effacez les SharedPreferences)
+        // Puis redirigez l'utilisateur vers la page de connexion (nav_login)
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        navController.navigate(R.id.nav_login);
+        // Fermez l'activité actuelle pour que l'utilisateur ne puisse pas revenir en arrière
+        finish();
+    }
 
 }

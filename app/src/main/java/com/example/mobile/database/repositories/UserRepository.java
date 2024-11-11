@@ -7,6 +7,8 @@ import com.example.mobile.database.DatabaseProvider;
 import com.example.mobile.database.EasyRideDatabase;
 import com.example.mobile.database.UserEntity;
 
+import java.util.List;
+
 public class UserRepository {
 
     private UserDao userDao;
@@ -26,4 +28,9 @@ public class UserRepository {
     public UserEntity getUserByEmail(String email){
         return userDao.getUserByEmail(email);
     }
+
+    public List<UserEntity> getAllUsers() {
+        return userDao.getAllUsers();  // Appel à la méthode du DAO pour récupérer tous les utilisateurs
+    }
+
 }

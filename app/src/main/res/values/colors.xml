@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="rouge">#e2615d</color>
     <color name="background">#FFFFFF</color>
     <color name="primary">#3F51B5</color> <!-- Remplacez par la couleur principale de votre choix -->
     <color name="secondary">#587bc6</color> <!-- Remplacez par une couleur secondaire -->

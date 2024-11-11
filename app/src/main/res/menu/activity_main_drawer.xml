@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+    <!-- Group for items at the top -->
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -29,5 +30,15 @@
             android:icon="@drawable/calendrier"
             android:title="Réservation" />
 
+
     </group>
+
+    <!-- Group for items at the bottom (logout) -->
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/logoutButton"
+            android:icon="@drawable/logout"
+            android:title="LogOut" />
+    </group>
+
 </menu>
